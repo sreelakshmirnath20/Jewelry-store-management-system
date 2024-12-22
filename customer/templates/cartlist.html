@@ -1,0 +1,78 @@
+{% extends 'navbar.html' %}
+{% block nav %}
+<h2>Cart List</h2>
+
+{% if carts %}
+
+{% if messages %}
+    {% for i in messages %}
+        {% if i.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>{{i}}</strong> 
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+        {% endif%}
+        {% if i.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>{{i}}</strong> 
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+        {% endif%}
+    {% endfor %}
+{% endif%}
+
+
+<table class="table table-borderer">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Image</th>
+            <th>Unit price</th>
+            <th>Quantity</th>
+            <th>Date and Time</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for i in carts %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.product.title}}</td>
+            <td>
+                <img src="{{i.product.image.url}}" height="300px" alt="">
+            </td>
+            <td>
+                {{i.product.price}}
+            </td>
+            <td>
+                <a href="{% url 'incQuantity' i.id%}" class="btn">+</a>
+                <span class="p-1 border">
+                    {{i.quantity}}
+                </span>
+                <a href="{% url 'decQuantity' i.id%}" class="btn">-</a>
+                <td>{{i.datetime}}</td>
+                <td>
+                    <a href="{% url 'order' i.id%}" onclick="return confirm('Are you sure?')" class="btn btn-outline-success">
+                        Place Order
+                    </a>
+                    <a href="{% url 'delcart' i.id%}" class="btn">
+                        <i class="fa-solid fa-trash" style="color: #ff0000;"></i>
+                    </a>
+                </td>
+            </td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% else %}
+<h1 class="text-center text-warning my-4">No items are added to cart</h1>
+{% endif %}
+
+
+
+
+{% endblock nav %}

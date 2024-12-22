@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Template</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .navbar {
+            padding-top: 2rem; /* Increase top padding */
+            padding-bottom: 2rem; /* Increase bottom padding */
+        }
+        body {
+            padding-top: 100px; /* Adjust this based on navbar height */
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h1, h2, h3{
+  letter-spacing: 2px;
+}
+
+header{
+  background: #000;
+  color: #fff;
+}
+
+.container{
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.brand{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 40px;
+}
+
+.brand img{
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+/*========== GENERAL ==========*/
+
+.section{
+  padding-top: 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.section-head h2{
+  font-weight: 400;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.section-head p{
+  color: #fcbe32;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.list-head h3{
+  padding-bottom: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.list-head span{
+  color: #999;
+  font-weight: 100;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+/*========== MAIN CONTENT ==========*/
+
+.main-background{
+  background: url('http://www.gold.org/sites/default/files/images/Three_bracelets.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.main-content{
+  text-align: right;
+}
+
+.main-content h1{
+  font-size: 4vw;
+  margin-bottom: 20px;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.main-content h2{
+  font-size: 3vw;
+  color: #fcbe32;
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+
+.main-content p{
+  font-size: 2.5vw;
+  margin-bottom: 40px;
+}
+
+.main-content a{
+  color: #fcbe32;
+  text-decoration: none;
+}
+
+.main-content a:hover{
+  color: #eee;
+}
+
+/*==========  CUSTOM COLLECTION ==========*/
+
+.collection-list ul{
+  list-style: none;
+}
+
+.collection-list ul li{
+  display: inline-block;
+  padding: 14px;
+}
+
+/*==========  NEW COLLECTION ==========*/
+
+.new-collection{
+  position: absolute;
+  width: 100%;
+}
+
+.new-collection .left{
+  float: left;
+  background: url('https://media.angieslist.com/s3fs-public/styles/widescreen_large/public/jewelry.jpeg?itok=ymeE9NXz');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  height: 350px;
+  width: 50%;
+}
+
+.new-collection .right{
+  float: left;
+  background: url('http://static.boredpanda.com/blog/wp-content/uploads/2016/03/terrarium-jewelry-microcosm-ruby-robin-boutique-10.jpg');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  height: 350px;
+  width: 50%;
+}
+
+.new-collection .middle{
+  position: absolute;
+  background-color: #fdcab8;
+  height: 250px;
+  width: 350px;
+  left: 50%;
+  top: 50%;
+  margin-left: -175px;
+  margin-top: -125px;
+  text-align: center;
+}
+
+.new-collection .mid-title{
+  text-transform: uppercase;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  margin-left: -80px;
+  margin-top: -60px;
+}
+
+.new-collection .mid-title h2{
+  font-weight: 400;
+  padding-bottom: 20px;
+  color: #eee;
+}
+
+.new-collection .mid-title a{
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #555;
+  border: 1px solid #555;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.new-collection .mid-title a:hover,
+.new-collection .mid-title a:focus{
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/*==========  DESIGNER COLLECTION ==========*/
+
+.designer-collection .section-head {
+  padding-top: 340px;
+}
+
+/*==========  SECTION CARDS ==========*/
+
+.card-wrapper section{
+  float: left;
+  background: #985d8d;
+  width: 50%;
+  height: auto;
+  text-align: center;
+}
+
+.card-wrapper section .card-title{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  line-height: 2em;
+}
+
+.card-wrapper section .card-title a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.card-wrapper section .card-title a:hover,
+.card-wrapper section .card-title a:focus{
+  color: #333;
+}
+
+
+.card-wrapper .card-one{
+  background: url('https://static.pexels.com/photos/356148/pexels-photo-356148.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+}
+
+.card-wrapper .card-two{
+  background: #985d8d;
+  height: 350px;
+  color: #eee;
+}
+
+.card-wrapper .card-three{
+  background: #fcbe32;
+  height: 350px;
+}
+
+.card-wrapper .card-four{
+  background: url('http://findmyrock.com/wp-content/uploads/2013/04/best-photography-6.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+}
+
+/*==========  DESIGNER GALLERY ==========*/
+
+
+.gallery .section-head{
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: -50px;
+}
+
+.gallery-showcase{
+  list-style: none;
+}
+
+.gallery-showcase li{
+  display: block;
+  width: 33.33%;
+  float: left;
+  padding: 4px;
+}
+
+.gallery-showcase figure{
+  overflow: hidden;
+}
+
+.gallery-showcase img{
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.gallery-showcase img:hover{
+  transform: scale(1.05);
+}
+
+/*==========  ABOUT US ==========*/
+
+.about .wrapper {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center the yellow box horizontally */
+  align-items: center; /* Center the yellow box vertically */
+  flex-direction: column; /* Stack left and right vertically if needed */
+  padding-top: 80px;
+  height: 200px; /* Ensure height for alignment */
+}
+
+.about .left,
+.about .right {
+  width: 50%; /* Set width for both sections */
+  height: 500px; /* Set equal height */
+}
+
+.about .left {
+  background: url('http://maxpixel.freegreatpicture.com/static/photo/1x/Diamond-Luxury-Jewelry-Gold-Shiny-Precious-888286.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.about .right {
+  background: #fdcab8;
+  display: flex; /* Center text inside yellow box */
+  justify-content: center; /* Horizontally align text */
+  align-items: center; /* Vertically align text */
+  margin: 0 auto; /* Ensure the box stays centered */
+}
+
+.about .right .text {
+  color: #555;
+  padding: 10px 80px;
+  line-height: 1.5;
+  text-align: center; /* Center-align the text */
+}
+.about .left,
+.about .right {
+  width: 50%; /* Keep the width as it is */
+  height: 400px; /* Increase the height (e.g., 400px or any value you prefer) */
+}
+
+.about .wrapper {
+  height: 400px; /* Ensure the parent wrapper's height matches the new height */
+}
+
+
+
+
+/*==========  CONTACT US ==========*/
+
+form{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+input[type=text], input[type=button], textarea{
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #985d8d;
+  border-radius: 4px;
+  margin: 6px;
+  resize: vertical;
+}
+
+input[type=button]{
+  background: #bb8eb3;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=button]:hover{
+  background: #985d8d;
+}
+
+/*==========  FOOTER ==========*/
+
+.bottom-links ul{
+  list-style: none;
+  text-align: center;
+  padding: 40px;
+}
+
+.bottom-links li{
+  display: inline;
+  padding: 20px;
+}
+
+.bottom-links ul li a{
+  text-decoration: none;
+  color: #888;
+  font-size: 16px;
+}
+
+.bottom-links ul li a:hover,
+.buttom-links ul li a:focus{
+  color: #985d8d;
+}
+
+footer{
+  padding: 20px;
+  background: #222;
+  color: #fcbe32;
+  text-align: center;
+}
+    </style>
+    <script>
+        $(function(){
+    //Smooth scroll
+    var $root = $('html, body');
+    $('a').click(function(){
+       $root.animate({
+          scrollTop: $($.attr(this, 'href')).offset().top
+       }, 800);
+      return false;
+    });
+
+   //Sticky navigation on scroll.
+      $(document).on('scroll', function(){
+        if($(this).scrollTop() > 185){
+            $('nav').addClass('nav-sticky');
+        }else{
+            $('nav').removeClass('nav-sticky');
+        }
+    });
+    //Add active class to the nav on click.
+
+});
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll shadow-0" style="background-color: #fdcab8;">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="letter-spacing: 3px; color: #c24244;"><i class="fa-solid fa-infinity" style="color: #f5b761;"></i> jewelry</a>
+            <button class="navbar-toggler ps-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample01"
+                aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="d-flex justify-content-start align-items-center">
+                    <i class="fas fa-bars" style="color: #7f4722;"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarExample01">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link px-3" href="{% url 'home' %}" style="color: #7f4722;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#new-sec" style="color: #7f4722;">new collection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#about" style="color: #7f4722;">about us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="#contact" style="color: #7f4722;">contact us</a>
+                    </li>
+                </ul>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'cartlist' %}">
+                              <i class="fa-solid fa-cart-shopping" style="color: #7f4722;"></i>Cart
+                              <span class="badge bg-warning">{{cart}}</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'lorder' %}">
+                                <i class="fa-solid fa-bag-shopping" style="color: #7f4722;"></i>MyOrders
+                              <span class="badge bg-warning">{{order}}</span>
+                            </a>
+                              
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">
+                                <i class="fa-solid fa-right-from-bracket" style="color: #7f4722;"></i> Logout
+                                
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% block nav %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h1, h2, h3{
+  letter-spacing: 2px;
+}
+
+header{
+  background: #000;
+  color: #fff;
+}
+
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.brand{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 40px;
+}
+
+.brand img{
+  margin-bottom: 20px;
+}
+
+nav.nav-sticky{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #222;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  z-index: 10;
+  transition: all 1s;
+}
+
+nav ul{
+  list-style: none;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #222;
+}
+
+nav ul li a.active{
+  color: #fcbe32;
+}
+
+nav ul li{
+  display: inline;
+  padding: 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #999;
+}
+
+nav ul li a:hover{
+  color: #fcbe32;
+}
+
+/*========== GENERAL ==========*/
+
+.section{
+  padding-top: 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.section-head h2{
+  font-weight: 400;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.section-head p{
+  color: #fcbe32;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.list-head h3{
+  padding-bottom: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.list-head span{
+  color: #999;
+  font-weight: 100;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+/*========== MAIN CONTENT ==========*/
+
+.main-background{
+  background: url('https://tse2.mm.bing.net/th?id=OIP.uKlF13TV1GnxA4LlOmqC6QHaDt&pid=Api&P=0&h=220');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.main-content{
+  text-align: right;
+}
+
+.main-content h1{
+  font-size: 4vw;
+  margin-bottom: 20px;
+  font-weight: 300;
+  padding-bottom: 20px;
+}
+
+.main-content h2{
+  font-size: 3vw;
+  color: #fcbe32;
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+
+.main-content p{
+  font-size: 2.5vw;
+  margin-bottom: 40px;
+}
+
+.main-content a{
+  color: #fcbe32;
+  text-decoration: none;
+}
+
+.main-content a:hover{
+  color: #eee;
+}

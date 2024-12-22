@@ -1,0 +1,49 @@
+{% extends 'navbar.html' %}
+{% block nav %}
+
+<div >
+  <h2>Product list</h2>
+  <div class="d-flex justify-content-between mb-4 p-2 mt2">
+    
+      <form action="{% url 'plist' cat %}" method="get" class="d-flex">
+        <select name="sort" class="form-select me-2" onchange="this.form.submit()">
+          <option value="">Sort By</option>
+          <option value="price_low_to_high" {% if request.GET.sort == "price_low_to_high" %}selected{% endif %}>
+            Price: Low to High
+          </option>
+          <option value="price_high_to_low" {% if request.GET.sort == "price_high_to_low" %}selected{% endif %}>
+            Price: High to Low
+          </option>
+        </select>
+        <noscript><button class="btn btn-success">Sort</button></noscript>
+      </form>
+
+      <form action="{% url 'search' %}" method="post" class="d-flex">
+        {% csrf_token %}
+        <input type="search" placeholder="search here" name="searchkey" class="form-control">
+        <button class="btn btn-success">Search</button>
+      </form>
+  </div>
+  
+  
+</div>
+
+
+<div class="d-flex justify-content-evenly flex-wrap p-5">
+
+{% for i in products %}
+<div class="card mt-5" style="width: 18rem;">
+    <img src="{{i.image.url}}"  class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-center">{{i.title}}</h5>
+      <h6 class="card-text text-center">{{i.description}}</h6>
+      <h6 class="card-text text-center"><span class="badge bg-dark">{{i.stock}}</span></h6>
+      <p class="card-text text-center">RS:{{i.price}}</p>
+      <a href="{% url 'pdetail' i.id %}" class="stretched-link"></a>
+    </div>
+  </div>
+{% endfor %}
+
+</div>
+
+{% endblock nav %}
